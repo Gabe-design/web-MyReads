@@ -1,0 +1,200 @@
+body {
+    font-family: "Helvetica", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F1EA;
+}
+
+h1, h2, h3 {
+    color: #A52A2A;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background-color: #A52A2A;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #800080;
+    border-color: #800080;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    font-size: 1.1em;
+    color: #000000;
+}
+
+nav a:hover {
+    color: #A52A2A;
+    text-decoration: underline;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    width: 200px;
+}
+
+.search-bar i {
+    color: #A52A2A;
+}
+
+/* Main Body */
+.book-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+}
+
+.book-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    display: flex;
+    gap: 20px;
+    margin: 10px;
+}
+
+.book-card img {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(119, 136, 153, 0.6);
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-info h3 {
+    font-size: 1.5em;
+}
+
+.book-info p {
+    font-size: 1em;
+    color: #000000;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: 40px 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company, .connect {
+    display: flex;
+    flex-direction: column;
+}
+
+.company ul, .connect ul {
+    list-style: none;
+    padding: 0;
+}
+
+.company li, .connect li {
+    margin: 10px 0;
+}
+
+.connect i {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .book-section {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 700px) {
+    header .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        margin-top: 20px;
+    }
+
+    .book-section {
+        flex-direction: column;
+    }
+
+    .book-card {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    footer .footer-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .company, footer .connect {
+        align-items: center;
+    }
+
+    footer .connect ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
